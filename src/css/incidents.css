@@ -1,0 +1,75 @@
+.incidents-wrapper {
+  display: inline-block;
+}
+
+.incidents-wrapper--scrollable {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.incidents {
+  border: solid 1px rgba(0,0,0,.12);
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.incidents tr.artificial-height {
+  height: 32px;
+}
+
+.incidents tr:not(:last-child) {
+  border-bottom: solid 1px rgba(0,0,0,.24);
+}
+
+.incidents td, .incidents th {
+  padding: 1px 8px;
+}
+
+.incidents .centered {
+  text-align: center;
+}
+
+.incidents .icon-cell {
+  user-select: none;
+}
+
+.incidents .has-checkbox {
+  padding-left: 14px;
+  padding-right: 0;
+}
+
+.incidents .has-checkbox .mdl-checkbox__ripple-container {
+  height: 34px!important;
+  width: 34px!important;
+  top: -5px!important;
+  left: -9px!important;
+}
+
+.incidents .icon-cell .material-icons {
+  cursor: pointer;
+}
+
+.incidents .material-icons {
+  vertical-align: middle;
+}
+
+.incidents .verification-actions {
+  display: inline-block;
+}
+
+.incidents .more {
+  cursor: pointer;
+}
+
+.incidents-wrapper .mdl-menu__container {
+  top: 0;
+  right: 0;
+}
+
+.notvisible {
+  display: none;
+}
+
+.incidents tr.line-through td.can-strike {
+  text-decoration: line-through;
+}

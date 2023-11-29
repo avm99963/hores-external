@@ -1,0 +1,320 @@
+:root {
+  --material-green: rgb(76,175,80);
+}
+
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.main {
+  position: relative;
+  display: block;
+  width: Calc(100% - 64px);
+  max-width: 1024px;
+  margin: 20px auto;
+  padding: 16px 16px 32px 16px;
+  border-radius: 2px;
+  background: #FFFFFF;
+}
+
+.main.withfab {
+  padding: 16px 16px 64px 16px!important;
+}
+
+.delete, .icon {
+  color: black!important;
+  vertical-align: middle;
+}
+
+.icon-no-black {
+  vertical-align: middle;
+}
+
+a.backbtn {
+  text-decoration: none;
+  color: #424242;
+}
+
+a.backbtn .material-icons {
+  vertical-align: middle;
+}
+
+.mdl-tabs__panel {
+  padding-top: 16px;
+}
+
+.mdl-navigation__link span {
+  vertical-align: middle;
+}
+
+dynscript {
+  display: none;
+}
+
+details.debug summary {
+  color: rgb(255, 64, 129);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.overflow-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.overflow-wrapper.overflow-wrapper--for-table {
+  padding: 4px;
+  margin: -4px;
+}
+
+details.debug pre {
+  margin: 0;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.margintop {
+  margin-top: 16px;
+}
+
+i.help {
+  vertical-align: middle;
+  cursor: help;
+}
+
+.mdl-data-table__cell--centered {
+  text-align: center!important;
+}
+
+.mdl-dialog .mdl-dialog__content, .copyto {
+  overflow-y: auto;
+  background: linear-gradient(white 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}
+
+.mdl-dialog .mdl-dialog__content {
+  max-height: Calc(100vh - 232px);
+}
+
+.copyto {
+  max-height: 300px;
+}
+
+.mdl-dialog .mdl-dialog__title {
+  margin-bottom: 4px; /* Otherwise sometimes the title is not entirely shown */
+}
+
+a.mdl-js-ripple-effect {
+  position: relative;
+}
+
+.always-focused {
+  font-size: 12px;
+  top: 4px;
+  visibility: visible;
+}
+
+.clicky-container {
+  text-decoration: none!important;
+  color: black!important;
+}
+
+.clicky {
+  position: relative;
+  display: block;
+  width: Calc(100% - 10px);
+  margin-bottom: 5px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 5px;
+  border-left: 4px solid #212121;
+}
+
+.clicky:hover {
+  background-color: #EEE;
+}
+
+.clicky .icon {
+  float: left;
+  margin-right: 8px;
+}
+
+.clicky .material-icons {
+  font-size: 40px;
+}
+
+.clicky .title {
+  font-weight: bold;
+}
+
+.clicky .description {
+  color: rgba(0, 0, 0, .54);
+  font-weight: 400;
+}
+
+main .actions {
+  margin: 16px 0 16px 16px;
+  float: right;
+}
+
+.mdl-menu a {
+  text-decoration: none;
+}
+
+.oneline {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.icon-text {
+  font-size: 14px!important;
+  vertical-align: middle;
+}
+
+.pagination {
+  margin: 16px 0;
+}
+
+.pagination .page {
+  padding: 0 4px;
+}
+
+.mdl-button .material-icons {
+  vertical-align: middle;
+}
+
+[data-dyndialog-href] {
+  cursor: pointer;
+}
+
+.mdl-dialog__actions .mdl-button.mdl-button--icon {
+  height: 32px!important;
+  margin-top: 2px;
+}
+
+
+.mdl-layout__drawer>span.mdl-layout-title {
+    line-height: 20px!important;
+    margin-top: 22px;
+}
+
+body.dark-background header, body.dark-background header .material-icons {
+  color: white!important;
+}
+
+.mdl-layout__drawer .logo {
+  max-height: 32px;
+}
+
+option:disabled {
+  color: graytext!important;
+}
+
+.subtitle {
+  display: inline-block;
+  padding-top: 8px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.help-btn--top-right {
+  float: right;
+  margin: 16px 0;
+}
+
+.help-btn--top-right.help-btn--top-right-margin {
+  margin: 16px;
+}
+
+.mdl-button .material-icons, .mdl-button span {
+  vertical-align: middle;
+}
+
+/* Multiselect custom element stylings */
+.mdl-custom-multiselect__item {
+  line-height: normal;
+  height: auto;
+  padding: 0;
+}
+
+.mdl-custom-multiselect__item .mdl-checkbox {
+  height: auto;
+  padding: 4px 16px 4px 40px;
+}
+
+.mdl-custom-multiselect__item .mdl-checkbox__focus-helper, .mdl-custom-multiselect__item .mdl-checkbox__box-outline {
+  top: Calc(3px + 4px);
+  left: 16px;
+}
+
+.mdl-custom-multiselect__item {
+  line-height: normal;
+  height: auto;
+  padding: 0;
+}
+
+.mdl-custom-multiselect__item, .mdl-custom-multiselect__item .mdl-checkbox {
+  cursor: pointer!important;
+}
+
+.mdl-custom-selectfield__select {
+  user-select: none;
+}
+
+/* mdlext-selectfield color fix */
+.mdlext-selectfield__label::after {
+  background-color: var(--material-green);
+}
+
+.mdlext-selectfield.is-focused .mdlext-selectfield__label {
+  color: var(--material-green)!important;
+}
+
+/* Date-picker polyfill fixes */
+dialog {
+  z-index: 10;
+}
+
+/* Limit change */
+.limit-change-container {
+  margin: 4px 0;
+  padding: 4px 0 4px 8px;
+  border-left: 2px solid #212121;
+}
+
+/* Left actions above table */
+.left-actions {
+  position: sticky;
+  z-index: 10;
+  background: white;
+  top: 0;
+  padding: 8px 0;
+  border-top: 1px solid rgba(0,0,0,.12);
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+
+.highlighted {
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .main {
+    width: Calc(100% - 40px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mdl-layout__drawer>span.mdl-layout-title {
+    margin-top: 18px;
+  }
+
+  .subtitle {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

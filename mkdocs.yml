@@ -1,0 +1,33 @@
+site_name: Documentación de Control Horario
+theme:
+  name: 'material'
+  language: 'es'
+repo_name: avm99963/hores-external
+repo_url: https://github.com/avm99963/hores-external
+extra_css: ["css/styles.css"]
+markdown_extensions:
+  - admonition
+nav:
+  - 'Bienvenida': 'index.md'
+  - 'Manual para trabajadores':
+    - 'Introducción': 'trabajadores/index.md'
+    - 'Incidencias': 'trabajadores/incidencias.md'
+    - 'Validaciones': 'trabajadores/validaciones.md'
+    - 'Exportar registro': 'trabajadores/exportar-registro.md'
+    - 'Cómo restablecer la contraseña': 'trabajadores/como-restablecer-contrasena.md'
+    - 'Verificación en dos pasos': 'trabajadores/verificacion-en-dos-pasos.md'
+  - 'Manual para administradores':
+    - 'Introducción': 'administradores/index.md'
+    - 'Instalación y configuración':
+      - 'Instalación': 'administradores/instalacion-y-configuracion/instalacion.md'
+      - 'Configuración': 'administradores/instalacion-y-configuracion/configuracion.md'
+    - 'Personas': 'administradores/personas.md'
+    - 'Trabajadores': 'administradores/trabajadores.md'
+    - 'Calendarios': 'administradores/calendarios.md'
+    - 'Horarios base': 'administradores/horarios.md'
+    - 'Generación de registros': 'administradores/registros.md'
+    - 'Incidencias': 'administradores/incidencias.md'
+    - 'Validaciones': 'administradores/validaciones.md'
+    - 'Exportar registro': 'administradores/exportar-registro.md'
+    - 'Seguridad': 'administradores/seguridad.md'
+    - 'Recursos de ayuda': 'administradores/recursos-de-ayuda.md'

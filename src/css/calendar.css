@@ -1,0 +1,47 @@
+.calendar {
+  margin: 10px auto 40px auto;
+  border-collapse: collapse;
+}
+
+.calendar td {
+  padding: 8px;
+  min-width: 75px;
+}
+
+.calendar .day {
+  border: solid 1px black;
+}
+
+.calendar .day .date {
+  font-weight: bold;
+}
+
+select {
+  border-radius: 3px;
+}
+
+select[data-value="0"] {
+  background: #FF1744;
+  color: white;
+}
+
+select[data-value="1"] {
+  background: #00E5FF;
+  color: black;
+}
+
+select[data-value="2"] {
+  background: #00E676;
+  color: black;
+}
+
+select option {
+  background: white;
+  color: black;
+}
+
+.month {
+  font-weight: light;
+  font-size: 18px;
+  text-align: center;
+}

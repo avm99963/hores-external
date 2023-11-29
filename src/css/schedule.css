@@ -1,0 +1,130 @@
+.schedule {
+  display: inline-flex;
+  flex: none;
+  border: 1px solid rgba(0,0,0,.12);
+
+  --hour-height: 30px;
+}
+
+.schedule .sidetime {
+  padding-top: 36px;
+  width: 40px;
+}
+
+.schedule .sidetime .hour {
+  position: relative;
+  height: var(--hour-height);
+}
+
+.schedule .sidetime .hour .hour--text {
+  position: absolute;
+  top: -9px;
+  right: 7px;
+  font-size: 11px;
+}
+
+.schedule .day {
+  flex: 1 0 auto;
+  width: 100px;
+  min-width: 100px;
+}
+
+.schedule .day .day--header {
+  text-align: center;
+  box-sizing: content-box;
+  height: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 8px 0;
+  border-bottom: solid 1px #ccc;
+}
+
+.schedule .day .day--content {
+  position: relative;
+}
+
+.schedule .day .day--content .hour {
+  height: Calc(var(--hour-height) - 1px);
+}
+
+.schedule .day .day--content .hour:not(:last-child) {
+  border-bottom: solid 1px #ddd;
+}
+
+.schedule .day .day--content .hour:last-child, .schedule .sidetime .hour:last-child {
+  height: 13px;
+}
+
+.schedule .day .day--content .work-event, .schedule .day .day--content .inline-event {
+  position: absolute;
+  border-radius: 3px;
+  overflow-y: auto;
+}
+
+.schedule .day .day--content .event--actions {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  line-height: 14px;
+  background: #00000077;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.schedule .day .day--content .event--actions .material-icons {
+  color: white;
+  font-size: 20px;
+}
+
+.schedule .day .day--content .event--header, .schedule .day .day--content .event--body {
+  text-align: left;
+  font-size: 11px;
+}
+
+.schedule .day .day--content .work-event {
+  left: 4px;
+  width: 92px;
+  background: #2E7D32;
+}
+
+.schedule .day .day--content .work-event .event--header, .schedule .day .day--content .work-event .event--body {
+  line-height: 14px;
+  color: white;
+}
+
+.schedule .day .day--content .work-event .event--header {
+  margin: 5px 5px 0 5px;
+  font-weight: bold;
+}
+
+.schedule .day .day--content .work-event .event--body {
+  margin: 0 5px;
+}
+
+.schedule .day .day--content .inline-event {
+  left: 3px;
+  width: 86px;
+  background: #81C784;
+}
+
+.schedule .day .day--content .inline-event .event--header {
+  font-weight: 500;
+}
+
+.schedule .day .day--content .inline-event .event--header, .schedule .day .day--content .inline-event .event--body {
+  line-height: 14px;
+  margin: 0 5px;
+  color: black;
+}
+
+@media (hover: hover) {
+  .schedule .day .day--content .event--actions {
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+    background: #00000099;
+  }
+
+  .schedule .day .day--content .work-event:hover .event--actions {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "hores",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.php",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "datatables": "^1.10.18",
+    "dialog-polyfill": "^0.5.4",
+    "material-design-lite": "^1.3.0",
+    "mdl-ext": "^0.17.1",
+    "material-icons": "^0.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avm99963/hores-external.git"
+  },
+  "author": "Adrià Vilanova Martínez (avm99963)",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://iavm.xyz/b/hores"
+  },
+  "homepage": "https://github.com/avm99963/hores-external#readme"
+}
