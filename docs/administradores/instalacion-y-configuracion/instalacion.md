@@ -15,6 +15,9 @@ Ahora, para activar los archivos adjuntos, se debe crear una carpeta en el servi
 !!! warning "Asegúrate de que la carpeta no es accesible desde Internet"
     En caso que la carpeta estuviera dentro del directorio del aplicativo, esta sería accesible desde Internet, ¡y por lo tanto cualquier persona podría visualizar los archivos adjuntos!
 
+!!! note "Tamaño máximo de las subidas de archivos"
+    El tamaño de los archivos adjuntos está limitado a 6 MB des del aplicativo. Aun así, PHP por defecto podría tener la directiva `upload_max_filesize = 2M` en `php.ini`. Por este motivo, es conveniente comprobar cuál es el valor de la directiva, y aumentar el valor a como mínimo 6 MB para que el aplicativo funcione correctamente.
+
 Seguidamente, haz una copia del archivo `config.default.php` a `config.php`, y edita esta última copia para configurar algunas opciones del aplicativo.
 
 De momento, estos son los aspectos fundamentales que deberías configurar en ese archivo antes de proceder:
