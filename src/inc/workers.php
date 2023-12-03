@@ -143,7 +143,8 @@ class workers {
     $stime = (int)$day;
     $sstatus = (int)$status;
 
-    if ((!$internal && !in_array($sstatus, self::$affiliationStatusesManual)) || ($internal && !in_array($affiliationStatuses))) return false;
+    if (!$internal && !in_array($sstatus, self::$affiliationStatusesManual)) return false;
+    if ($internal && !in_array($sstatus, self::$affiliationStatuses)) return false;
 
     if (!workers::exists($sid)) return false;
 
@@ -157,7 +158,8 @@ class workers {
     $stime = (int)$day;
     $sstatus = (int)$status;
 
-    if ((!$internal && !in_array($sstatus, self::$affiliationStatusesManual)) || ($internal && !in_array($affiliationStatuses))) return false;
+    if (!$internal && !in_array($sstatus, self::$affiliationStatusesManual)) return false;
+    if ($internal && !in_array($sstatus, self::$affiliationStatuses)) return false;
 
     if (!self::existsWorkHistoryItem($id)) return false;
 
