@@ -20,7 +20,6 @@
 
 // Core of the application
 
-const INTERNAL_CLASS_NAMESPACE = "Internal\\";
 
 // Classes autoload
 spl_autoload_register(function($className) {
