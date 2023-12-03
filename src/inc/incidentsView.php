@@ -119,7 +119,7 @@ class incidentsView {
               <?php
             }
             ?>
-            <td class="can-strike"><?=strftime("%d %b %Y", $incident["day"])." ".security::htmlsafe($incident["allday"] ? "(todo el día)" : schedules::sec2time($incident["begins"])."-".schedules::sec2time($incident["ends"]))?></td>
+            <td class="can-strike"><?=date::getShortDate($incident["day"])." ".security::htmlsafe($incident["allday"] ? "(todo el día)" : schedules::sec2time($incident["begins"])."-".schedules::sec2time($incident["ends"]))?></td>
             <td>
               <a href="dynamic/editincidentcomment.php?id=<?=(int)$incident["id"]?>&continue=<?=$safeContinueUrl?>" data-dyndialog-href="dynamic/editincidentcomment.php?id=<?=(int)$incident["id"]?>&continue=<?=$safeContinueUrl?>" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" title="Ver/editar las observaciones"><i class="material-icons icon"><?=(empty($incident["details"]) && empty($incident["workerdetails"]) ? "mode_" : "")?>comment</i></a>
               <span<?=($attachments > 0 ? ' class="mdl-badge mdl-badge--overlap" data-badge="'.$attachments.'"' : '')?>><a href="dynamic/incidentattachments.php?id=<?=(int)$incident["id"]?>&continue=<?=$safeContinueUrl?>" data-dyndialog-href="dynamic/incidentattachments.php?id=<?=(int)$incident["id"]?>&continue=<?=$safeContinueUrl?>" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" title="Ver/gestionar los archivos adjuntos"><i class="material-icons icon">attach_file</i></a></span>

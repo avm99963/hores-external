@@ -83,7 +83,7 @@ switch ($_GET["format"]) {
 
       $this->SetFont('Arial','I',10);
       $this->SetY(-20);
-      $this->Cell(0, 10, export::convert("Generado: ".strftime("%d %b %Y %T", $actualTime)), 0, 0, 'L');
+      $this->Cell(0, 10, export::convert("Generado: ".date::getShortDateWithTime($actualTime)), 0, 0, 'L');
       $this->SetY(-20);
       $this->Cell(0, 10, $this->PageNo().'/{nb}', 0, 0, 'R');
     }

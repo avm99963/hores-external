@@ -33,7 +33,7 @@ class calendarsView {
 
       if ($dow == 1) echo "</tr>";
       if ($dom == 1) echo "</table>";
-      if ($dom == 1 || $start) echo "<div class='month'>".security::htmlsafe(ucfirst(strftime("%B %G", $current->getTimestamp())))."</div><table class='calendar'>";
+      if ($dom == 1 || $start) echo "<div class='month'>".security::htmlsafe(ucfirst(date::getMonthYear($current->getTimestamp())))."</div><table class='calendar'>";
       if ($dow == 1 || $start) echo "<tr>";
       if ($dom == 1 || $start) {
         for ($i = 1; $i < $dow; $i++) {

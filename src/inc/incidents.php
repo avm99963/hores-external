@@ -486,13 +486,13 @@ class incidents {
 
       if (!count($to)) return 0;
 
-      $subject = "Incidencia del tipo \"".security::htmlsafe($incidenttype["name"])."\" creada para ".security::htmlsafe($workerName)." el ".strftime("%d %b %Y", $sday);
+      $subject = "Incidencia del tipo \"".security::htmlsafe($incidenttype["name"])."\" creada para ".security::htmlsafe($workerName)." el ".date::getShortDate($sday);
       $body = mail::bodyTemplate("<p>Hola,</p>
       <p>Este es un mensaje automático para avisarte de que ".security::htmlsafe(people::userData("name"))." ha introducido la siguiente incidencia en el sistema de registro horario:</p>
       <ul>
         <li><b>Trabajador:</b> ".security::htmlsafe($workerName)."</li>
         <li><b>Motivo:</b> ".security::htmlsafe($incidenttype["name"])."</li>
-        <li><b>Fecha:</b> ".strftime("%d %b %Y", $sday)." ".(($sbegins == 0 && $sends == self::ENDOFDAY) ? "(todo el día)": schedules::sec2time($sbegins)."-".schedules::sec2time($sends))."</li>".
+        <li><b>Fecha:</b> ".date::getShortDate($sday)." ".(($sbegins == 0 && $sends == self::ENDOFDAY) ? "(todo el día)": schedules::sec2time($sbegins)."-".schedules::sec2time($sends))."</li>".
         (!empty($details) ? "<li><b>Observaciones:</b> <span style='white-space: pre-wrap;'>".security::htmlsafe($details)."</span></li>" : "").
       "</ul>
       <p style='font-size: 11px;'>Has recibido este mensaje porque estás configurado como persona responsable de la categoría a la que pertenece este trabajador o eres el administrador del sistema.</p>");
@@ -568,9 +568,9 @@ class incidents {
           "email" => $workerEmail,
           "name" => $workerName
         )];
-        $subject = "Incidencia del ".strftime("%d %b %Y", $incident["day"])." ".($value == 1 ? "verificada" : "rechazada");
+        $subject = "Incidencia del ".date::getShortDate($incident["day"])." ".($value == 1 ? "verificada" : "rechazada");
         $body = mail::bodyTemplate("<p>Bienvenido ".security::htmlsafe($workerName).",</p>
-        <p>Este es un mensaje automático para avisarte de que la incidencia que introduciste para el día ".strftime("%d de %B de %Y", $incident["day"])." ha sido ".($value == 1 ? "aceptada" : "rechazada").".</p><p>Puedes ver el estado de todas tus incidencias en el <a href='".security::htmlsafe($conf["fullPath"])."'>aplicativo web</a>.</p>");
+        <p>Este es un mensaje automático para avisarte de que la incidencia que introduciste para el día ".date::getLongDate($incident["day"])." ha sido ".($value == 1 ? "aceptada" : "rechazada").".</p><p>Puedes ver el estado de todas tus incidencias en el <a href='".security::htmlsafe($conf["fullPath"])."'>aplicativo web</a>.</p>");
 
         mail::send($to, [], $subject, $body);
       }

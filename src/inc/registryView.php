@@ -84,7 +84,7 @@ class registryView {
               <?php
             }
             ?>
-            <td class="can-strike"><?=strftime("%d %b %Y", $record["day"])?></td>
+            <td class="can-strike"><?=date::getShortDate($record["day"])?></td>
             <td class="centered can-strike"><?=schedules::sec2time($record["beginswork"])." - ".schedules::sec2time($record["endswork"])?></td>
             <td class="centered can-strike"><?=(intervals::measure($breakfastInt) == 0 ? "-" : ($isForWorker ? export::sec2hours(intervals::measure($breakfastInt)) : schedules::sec2time($record["beginsbreakfast"])." - ".schedules::sec2time($record["endsbreakfast"])))?></td>
             <td class="centered can-strike"><?=(intervals::measure($lunchInt) == 0 ? "-" : ($isForWorker ? export::sec2hours(intervals::measure($lunchInt)) : schedules::sec2time($record["beginslunch"])." - ".schedules::sec2time($record["endslunch"])))?></td>
