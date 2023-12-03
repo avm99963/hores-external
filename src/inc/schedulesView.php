@@ -21,7 +21,7 @@
 class schedulesView {
   const HOUR_HEIGHT = 30;
 
-  public static function renderSchedule(&$week, $editEnabled = false, $editLink, $deleteLink) {
+  public static function renderSchedule(&$week, $editEnabled, $editLink, $deleteLink) {
     $secmin = 24*60*60;
     $secmax = 0;
 
@@ -118,7 +118,7 @@ class schedulesView {
   <?php
   }
 
-  public static function renderPlainSchedule($week, $editEnabled = false, $editLink, $deleteLink, &$flag) {
+  public static function renderPlainSchedule($week, $editEnabled, $editLink, $deleteLink, &$flag) {
     foreach ($week as $day) {
       $flag = true;
       ?>
