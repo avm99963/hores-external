@@ -67,7 +67,7 @@ class recurringIncidents {
     return 0;
   }*/ // NOTE: This was a first idea, to allow setting up recurring incidents like schedules, but we've changed how we'll handle them and so this is no longer useful.
 
-  public static function add($worker, $type, $details, $ifirstday, $ilastday, $begins, $ends, $creator = "ME", $typeDays, $days, $alreadyTimestamp = false) {
+  public static function add($worker, $type, $details, $ifirstday, $ilastday, $begins, $ends, $creator, $typeDays, $days, $alreadyTimestamp = false) {
     if ($alreadyTimestamp) {
       $current = new DateTime();
       $current->setTimestamp($ifirstday);

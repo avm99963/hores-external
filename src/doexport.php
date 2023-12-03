@@ -77,7 +77,7 @@ switch ($_GET["format"]) {
 
   $actualTime = time();
 
-  class PDF extends EXFPDF {
+  class PDF extends exFPDF {
     function Footer() {
       global $actualTime;
 
