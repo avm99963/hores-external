@@ -2,9 +2,14 @@
 App which is used to keep track of the intervals of time that a worker is in the
 workplace in one or several companies.
 
+*** promo
+This project was created in 2019 and contains legacy code that does not reflect
+my current coding standards and best practices.
+***
+
 ## Documentation
-Documentation can be found at https://avm99963.github.io/hores-external/. Both the
-UI and the documentation are written in Spanish.
+Documentation can be found at https://avm99963.github.io/hores-external/. Both
+the UI and the documentation are written in Spanish.
 
 ## Contributions
 Contributions in the form of issues or code changes are welcome. You can report
