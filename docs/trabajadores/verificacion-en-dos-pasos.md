@@ -10,11 +10,6 @@ A parte, también se puede configurar como segundo factor, a parte del código, 
 
 <div style="text-align: center;"><video controls autoplay loop muted src="../../img/webauthn.mp4"></video></div>
 
-!!! note "Compatibilidad de las llaves de seguridad"
-    No todos los navegadores soportan el estándar WebAuthn (aunque la gran mayoría sí), que es el que se ha usado en el desarrollo de la aplicación para poder implementar la funcionalidad de las llaves de seguridad. Es por esto que esta funcionalidad podría no funcionar en varios navegadores, donde solo se podría utilizar el código de verificación como segundo factor. Se puede consultar una lista de los navegadores compatibles [aquí](https://caniuse.com/#feat=webauthn).
-
-    Además, las llaves de seguridad de software, como son por ejemplo la autenticación mediante huella dactilar, están disponibles solo en algunos sistemas operativos y navegadores específicos, como Chrome en Android o navegadores de escritorio. Desafortunadamente, los iPads y iPhones, aunque soportan llaves de seguridad físicas, todavía no soportan llaves de seguridad de software. Aun así, Apple tiene en los planes para el 2020 incorporar las llaves de seguridad de software en Safari.
-
 ## ¿Cómo se configura?
 Para configurarlo, accede a la sección **Seguridad** desde el menú lateral. Allí, en la sección **Verificación en dos pasos**, haz clic en el botón **Empezar**.
 
