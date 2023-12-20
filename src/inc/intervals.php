@@ -46,6 +46,8 @@ class intervals {
 
   // Return measure of the intersection
   public static function measureIntersection($a, $b) {
-    return self::measure(self::intersect($a, $b));
+    $intersection = self::intersect($a, $b);
+    if ($intersection === false) return 0;
+    return self::measure($intersection);
   }
 }
