@@ -3,7 +3,7 @@
 El servidor donde se va a instalar el aplicativo debe cumplir los siguientes requisitos:
 
 * **Sistema operativo:** distro Linux, Mac o Windows (se recomienda Linux, ya que solo está probado con Linux)
-* **Servidor:** Apache 2, PHP 8.3 (incluyendo las extensiones `mysql`, `curl` y `intl`), MySQL.
+* **Servidor:** Apache 2, PHP 8.3 (incluyendo las extensiones `curl`, `intl`, `mbstring` y `mysql`), MySQL.
 
 ## Instalación
 Para instalar el aplicativo, descarga el código fuente desde [https://github.com/avm99963/hores-external](https://github.com/avm99963/hores-external) y extraelo en el directorio raíz de Apache (`/var/www/html/` es el directorio raíz de Apache por defecto en Ubuntu).
