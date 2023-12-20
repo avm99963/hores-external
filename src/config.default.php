@@ -36,7 +36,7 @@ $conf["backgroundColorIsDark"] = false; // Whether the background color is dark
 $conf["logo"] = ""; // Optional, set it to a URL of a logo which will be displayed in the nav bar.
 $conf["enableRecovery"] = false; // Sets whether users can recover passwords.
 $conf["debug"] = false; // Sets whether the app shows debug information useful to the developer. WARNING: DO NOT ENABLE IN PRODUCTION AS IT MAY SHOW SENSITIVE INFORMATION
-$conf["superdebug"] = false; // Sets whether to enable super debug mode (for now it only disables redirects and displays verbose errors when calling security::checkParams())
+$conf["superdebug"] = false; // Sets whether to enable super debug mode (for now it only disables redirects, displays verbose errors when calling security::checkParams() and throws an ErrorException whenever the severity is included in |error_reporting()|)
 
 $conf["pdfs"] = [];
 $conf["pdfs"]["workersAlwaysHaveBreakfastAndLunch"] = false; // Sets up whether when an incident overlaps breakfast or lunch, the length of the incident should subtract lunch and breakfast time (false) or not because workers will have lunch or breakfast at another time inside of the work schedule (true). WARNING: SETTING THIS TO TRUE MAY LEAD TO UNEXPECTED RESULTS IN THE SUMMARY SHOWN AT THE BOTTOM OF DETAILED PDFs.

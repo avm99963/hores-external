@@ -35,6 +35,15 @@ spl_autoload_register(function($className) {
 // Getting configuration
 require_once(__DIR__."/config.php");
 
+// Error handler
+if ($conf['superdebug']) {
+  set_error_handler(function($severity, $message, $file, $line) {
+    if (error_reporting() & $severity) {
+      throw new ErrorException($message, 0, $severity, $file, $line);
+    }
+  });
+}
+
 // Setting timezone and locale accordingly
 date_default_timezone_set("Europe/Madrid");
 setlocale(LC_TIME, 'es_ES.UTF-8', 'es_ES', 'es');
