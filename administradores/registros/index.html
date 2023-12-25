@@ -1,0 +1,1003 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../horarios/">
+      
+      
+        <link rel="next" href="../incidencias/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.6">
+    
+    
+      
+        <title>Generación de registros - Documentación de Control Horario</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/styles.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#generacion-de-registros" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Documentación de Control Horario" class="md-header__button md-logo" aria-label="Documentación de Control Horario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación de Control Horario
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Generación de registros
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/avm99963/hores-external" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    avm99963/hores-external
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentación de Control Horario" class="md-nav__button md-logo" aria-label="Documentación de Control Horario" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Documentación de Control Horario
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/avm99963/hores-external" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    avm99963/hores-external
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Bienvenida
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          Manual para trabajadores
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Manual para trabajadores" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Manual para trabajadores
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trabajadores/" class="md-nav__link">
+        Introducción
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trabajadores/incidencias/" class="md-nav__link">
+        Incidencias
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trabajadores/validaciones/" class="md-nav__link">
+        Validaciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trabajadores/exportar-registro/" class="md-nav__link">
+        Exportar registro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trabajadores/como-restablecer-contrasena/" class="md-nav__link">
+        Cómo restablecer la contraseña
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trabajadores/verificacion-en-dos-pasos/" class="md-nav__link">
+        Verificación en dos pasos
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
+          Manual para administradores
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Manual para administradores" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Manual para administradores
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Introducción
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" tabindex="0" aria-expanded="false">
+          Instalación y configuración
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Instalación y configuración" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Instalación y configuración
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion-y-configuracion/instalacion/" class="md-nav__link">
+        Instalación
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalacion-y-configuracion/configuracion/" class="md-nav__link">
+        Configuración
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../personas/" class="md-nav__link">
+        Personas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trabajadores/" class="md-nav__link">
+        Trabajadores
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../calendarios/" class="md-nav__link">
+        Calendarios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../horarios/" class="md-nav__link">
+        Horarios base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Generación de registros
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Generación de registros
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmo-de-generacion-de-los-registros" class="md-nav__link">
+    Algoritmo de generación de los registros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-los-registros-generados" class="md-nav__link">
+    Ver los registros generados
+  </a>
+  
+    <nav class="md-nav" aria-label="Ver los registros generados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ver-una-lista-global" class="md-nav__link">
+    Ver una lista global
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ver-una-lista-para-un-trabajador" class="md-nav__link">
+    Ver una lista para un trabajador
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#corregir-errores-en-los-registros" class="md-nav__link">
+    Corregir errores en los registros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invalidar-registros" class="md-nav__link">
+    Invalidar registros
+  </a>
+  
+    <nav class="md-nav" aria-label="Invalidar registros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invalidar-un-registro-especifico" class="md-nav__link">
+    Invalidar un registro específico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalidar-varios-dias-de-registros" class="md-nav__link">
+    Invalidar varios días de registros
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generar-registros-manualmente" class="md-nav__link">
+    Generar registros manualmente
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-logs" class="md-nav__link">
+    Ver logs
+  </a>
+  
+    <nav class="md-nav" aria-label="Ver logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#causas-de-una-advertencia" class="md-nav__link">
+    Causas de una advertencia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#causas-de-un-error" class="md-nav__link">
+    Causas de un error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#causas-de-un-error-fatal" class="md-nav__link">
+    Causas de un error fatal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../incidencias/" class="md-nav__link">
+        Incidencias
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validaciones/" class="md-nav__link">
+        Validaciones
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exportar-registro/" class="md-nav__link">
+        Exportar registro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../seguridad/" class="md-nav__link">
+        Seguridad
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recursos-de-ayuda/" class="md-nav__link">
+        Recursos de ayuda
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#algoritmo-de-generacion-de-los-registros" class="md-nav__link">
+    Algoritmo de generación de los registros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-los-registros-generados" class="md-nav__link">
+    Ver los registros generados
+  </a>
+  
+    <nav class="md-nav" aria-label="Ver los registros generados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ver-una-lista-global" class="md-nav__link">
+    Ver una lista global
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ver-una-lista-para-un-trabajador" class="md-nav__link">
+    Ver una lista para un trabajador
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#corregir-errores-en-los-registros" class="md-nav__link">
+    Corregir errores en los registros
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invalidar-registros" class="md-nav__link">
+    Invalidar registros
+  </a>
+  
+    <nav class="md-nav" aria-label="Invalidar registros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invalidar-un-registro-especifico" class="md-nav__link">
+    Invalidar un registro específico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalidar-varios-dias-de-registros" class="md-nav__link">
+    Invalidar varios días de registros
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generar-registros-manualmente" class="md-nav__link">
+    Generar registros manualmente
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ver-logs" class="md-nav__link">
+    Ver logs
+  </a>
+  
+    <nav class="md-nav" aria-label="Ver logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#causas-de-una-advertencia" class="md-nav__link">
+    Causas de una advertencia
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#causas-de-un-error" class="md-nav__link">
+    Causas de un error
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#causas-de-un-error-fatal" class="md-nav__link">
+    Causas de un error fatal
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="generacion-de-registros">Generación de registros</h1>
+<p>Cada día, al final del día, un programa transforma los horarios base en registros que dejan constancia del horario que hubiera tenido que hacer cada trabajador durante ese día. Esto se hace así porque luego el trabajador debe validar cada uno de estos registros y de esta forma tampoco se depende de que el horario base esté correctamente definido una vez ya se han generado y validado todos los registros.</p>
+<h2 id="algoritmo-de-generacion-de-los-registros">Algoritmo de generación de los registros</h2>
+<ol>
+<li>Primero se carga una lista de horarios base, que se trata de los horario base activos en el momento de generar los registros tal que la fecha en la que se ejecute esté dentro del periodo de validez del horario base.</li>
+<li>Para cada uno de estos horarios base, se realiza lo siguiente:<ol>
+<li>Se obtiene quién es el trabajador sobre el cual se define el horario en cuestión.</li>
+<li>Se obtiene el calendario laboral correspondiente al trabajador de la siguiente manera:<ol>
+<li>Si el trabajador está dentro de una categoría, se busca si la categoría tiene definido un calendario para el día actual. Si es así, este es el calendario que se obtiene.</li>
+<li>En caso contrario, se busca si existe un calendario por defecto definido para el día actual. Si es así, este es el calendario que se obtiene.</li>
+<li>En caso contrario, salta un mensaje de advertencia y se pasa a tratar directamente el siguiente horario, ya que no se ha encontrado ningún calendario que nos diga qué tipo de día es el día actual.</li>
+</ol>
+</li>
+<li>Se mira qué tipo de día es el día actual en el calendario obtenido. Si no existe un horario diario para el día de la semana actual (lunes-domingo) y tipo de día (lectivo/no lectivo/festivo), entonces se pasa a procesar el horario base siguiente, porque no tenemos que generar ningún registro.</li>
+<li>En este punto nos hemos asegurado de que hay que generar un registro. Es por ello que miramos si ya existe un registro generado para el trabajador y el día actual.<ol>
+<li>En caso que ya exista un registro, salta un mensaje de advertencia y se pasa a tratar directamente el siguiente horario.</li>
+<li>En caso contrario, se procede a generar el registro, copiando los datos que había en el horario base para el día de la semana y tipo de día actual.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="ver-los-registros-generados">Ver los registros generados</h2>
+<h3 id="ver-una-lista-global">Ver una lista global</h3>
+<p>Para ver una lista con todos los registros generados, se debe acceder a la sección <strong>Registro</strong> que hay en el menú lateral.</p>
+<h3 id="ver-una-lista-para-un-trabajador">Ver una lista para un trabajador</h3>
+<p>Se debe acceder a la sección <strong>Trabajadores</strong> y hacer clic en el icono <i class="material-icons">list</i> al lado de un trabajador.</p>
+<h2 id="corregir-errores-en-los-registros">Corregir errores en los registros</h2>
+<p>Podría ser que al definir los horarios base se cometa algún error y haya que rectificarlo en los registros generados. Para ello, existen dos herramientas que nos permiten modificar indirectamente la tabla de registros con el fin de subsanar el error.</p>
+<h2 id="invalidar-registros">Invalidar registros</h2>
+<p>Cada registro se puede invalidar, de tal manera que actúa como si no existiera. No es posible eliminar registros ya que la ley española prohibe que el registro horario pueda verse modificado por parte de la empresa, pero con el fin de arreglar los errores es posible invalidar los registros, dejando una copia del registro que aunque no tenga ningún tipo de efecto, se pueda seguir consultando para corroborar que el registro se ha invalidado.</p>
+<h3 id="invalidar-un-registro-especifico">Invalidar un registro específico</h3>
+<p>Para hacer esto, hay que hacer clic en el botón <i class="material-icons">more_vert</i> al lado de un registro en un listado de registros y seleccionar la opción <strong>Invalidar</strong>.</p>
+<div style="text-align: center;"><img src="../../img/invalidate-record.png" style="max-width: 500px;"></div>
+
+<h3 id="invalidar-varios-dias-de-registros">Invalidar varios días de registros</h3>
+<p>Es posible invalidar varios días de registros para varios trabajadores concretos mediante una sola acción, lo que facilita la invalidación de un error que ha ocurrido durante mucho tiempo y/o para varios trabajadores.</p>
+<p>Para acceder a la herramienta que permite hacer esto, hay que ser un usuario de tipo <em>hiperadministrador</em>, ya que los usuarios de tipo <em>administrador</em> no tienen acceso a esta herramienta. Ve a la sección <strong>Configuración</strong> desde el menú lateral, y selecciona la opción <strong>Herramientas avanzadas</strong>. Allí, selecciona la opción <strong>Invalidar registros en masa</strong> y sigue las instrucciones de la página.</p>
+<h2 id="generar-registros-manualmente">Generar registros manualmente</h2>
+<p>Esta herramienta permite generar registros manualmente de un día en concreto a partir de los horarios base con el mismo algoritmo que lo hace el script que los genera automáticamente, pero para los horarios pertenecientes a un subconjunto de trabajadores, en vez de obtener todos los horarios base aplicables.</p>
+<p>Para acceder a la herramienta, también se debe ser un usuario de tipo <em>hiperadministrador</em>. Ve a la sección <strong>Configuración</strong> desde el menú lateral, y selecciona la opción <strong>Herramientas avanzadas</strong>. Allí, selecciona la opción <strong>Generar registros manualmente</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Modo avanzado</p>
+<p>Si se hace clic en el botón <strong>Activar modo avanzado</strong> de la herramienta, se podrá seleccionar que se generen los registros horarios durante un intervalo de fechas en vez de en un día en específico. Lo que hará esto es recorrer el algoritmo descrito anteriormente para cada día del intervalo de fechas.</p>
+<p>El resultado de las acciones que se toman con la herramienta en este modo pueden ser catastróficas, así que antes de usarlo asegúrate de leer y comprender la advertencia que aparece cuando entras en este modo.</p>
+</div>
+<h2 id="ver-logs">Ver <em>logs</em></h2>
+<p>Cada vez que se ejecuta el script de generación de registros o se usa la herramienta para generar registros manualmente, se guarda un archivo de texto llamado <em>log</em> con el resultado de la acción y si ha habido errores.</p>
+<p>Es conveniente ver si ha habido algún error o advertencia de vez en cuando, porque en este caso puede que no se hayan generado todos los registros correctamente y haga falta corregirlo manualmente.</p>
+<p>Para acceder a los <em>logs</em>, se debe ir a la sección <strong>Configuración</strong> desde el menú lateral y hacer clic en la opción <strong><em>Logs</em></strong>. En el listado aparecerán los iconos <i class="material-icons" style="color: #ff9800;">warning</i>, <i class="material-icons" style="color: #f44336;">error</i> y <i class="material-icons" style="color: #b71c1c;">error</i> dependiendo de si ese <em>log</em> contiene un mensaje de advertencia, de error, o de error fatal. Mediante el icono <i class="material-icons">notes</i> se puede ver el <em>log</em>.</p>
+<h3 id="causas-de-una-advertencia">Causas de una advertencia</h3>
+<p>Una advertencia puede causarse por los siguientes motivos, que son causa de una mala configuración por parte del administrador:</p>
+<ul>
+<li>No se ha podido encontrar un calendario para algún trabajador que tenía un horario asignado.</li>
+<li>Un trabajador ya tenía un registro creado para el mismo día para el que se intentaba generar el registro, así que no se ha generado.</li>
+</ul>
+<h3 id="causas-de-un-error">Causas de un error</h3>
+<p>Un error puede causarse por los siguientes motivos, que son siempre errores del aplicativo y no tienen por qué implicar un error por parte del administrador:</p>
+<ul>
+<li>Al intentar insertar el registro en la base de datos ha ocurrido un problema interno.</li>
+</ul>
+<h3 id="causas-de-un-error-fatal">Causas de un error fatal</h3>
+<p>Un error fatal consiste en errores inesperados del aplicativo, como los errores, y estas son las posibles causas:</p>
+<ul>
+<li>No se han podido cargar los calendarios por un error interno (y no se ha generado ningún registro).</li>
+<li>No se han podido cargar los horarios aplicables por un error interno (y no se ha generado ningún registro).</li>
+<li>Mientras se procesaba un registro, ha ocurrido un error interno y no se han podido obtener los detalles del registro (puede que se hayan procesado otros registros correctamente).</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  </body>
+</html>
