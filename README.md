@@ -7,6 +7,16 @@ This project was created in 2019 and contains legacy code that does not reflect
 my current coding standards and best practices.
 ***
 
+## Project status
+
+This project is production-ready, but is currently in maintenance mode.
+
+No new features are being developed, and only critical bugs are fixed if found.
+Other bugs can also be fixed if time allows.
+
+Also, dependencies are no longer maintained, which may make this project
+vulnerable. A best effort is done to prevent this from happening.
+
 ## Documentation
 Documentation can be found at https://avm99963.github.io/hores-external/. Both
 the UI and the documentation are written in Spanish.
